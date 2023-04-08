@@ -7,14 +7,16 @@ void myexpenses(){
   var expenses = [];
   var total = 0;
   while (true) {
-    print('Enter an expense amount: ');
+    print('Enter your expense amount or enter zero to end : ');
     var expense = int.parse(stdin.readLineSync()!);
+    
     if (expense == 0) {
       break;
     }
     expenses.add(expense);
     total = total + expense;
   }
-  print('$total');
+  print('Your total is $total');
+  return;
   
 }
